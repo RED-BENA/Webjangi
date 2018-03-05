@@ -1,6 +1,6 @@
 # Webjangi
 
-프로젝트의 세 번째 웹사이트, 웹쟁이(http://www.webjangi.com/)입니다.
+프로젝트의 세 번째 웹사이트, 웹쟁이(http://www.webjangi.com/) 입니다.
 
 >- **웹사이트 이름 (웹사이트 주소)** : 웹쟁이 (https://kakaobank.com/)
 >- **페이지 구성** : index 페이지, 무료 디자인, 무료 템플릿, 프리미엄, 고객지원
