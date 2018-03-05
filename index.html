@@ -9,6 +9,11 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="js/common.js"></script>
   <title>웹쟁이 | 무료 웹소스 제공</title>
 </head>
 
@@ -18,7 +23,7 @@
       <img src="images/logo_wr.png" />
     </a>
 
-    <a class="index__header__menu-button" href="#">
+    <a class="index__header__menu-button js-index__header__menu-button" href="#">
       <span class="index__header__menu-button__line"></span>
       <span class="index__header__menu-button__line"></span>
       <span class="index__header__menu-button__line"></span>
@@ -44,43 +49,90 @@
       </li>
     </ul>
 
-    <div class="main-menu open">
+    <div class="main-menu js-main-menu">
       <div class="main-menu__profile">
         <a class="main-menu__profile__image" href="#"></a>
-        <a class="main-menu__close" href="#"></a>
-      </div>
-
-      <div class="main-menu__profile">
-        <a class="main-menu__profile__image" href="#"></a>
-        <a class="main-menu__close" href="#"></a>
+        <a class="main-menu__close js-main-menu__close" href="#"></a>
       </div>
 
       <div class="main-menu__login">
-        <a href="#">로그인</a>
+        <a class="main-menu__list__link" href="#">로그인</a>
       </div>
 
       <ul class="main-menu__list">
         <li class="main-menu__list__item">
-          <a href="#">무료디자인</a>
+          <a class="main-menu__list__link" href="#">무료디자인</a>
         </li>
 
         <li class="main-menu__list__item">
-          <a href="#">무료템플릿</a>
+          <a class="main-menu__list__link" href="#">무료템플릿</a>
         </li>
 
-        <li class="main-menu__list__item">
-          <a href="#">프리미엄</a>
+        <li class="main-menu__list__item--multiple premium">
+          <a class="main-menu__list__link" href="#">프리미엄</a>
+          <a class="main-menu__list__drop js-main-menu__list__drop" href="#"></a>
         </li>
 
-        <li class="main-menu__list__item">
-          <a href="#">고객지원</a>
+        <li class="main-menu__list__item js-premium">
+          <ul class="main-menu__list__sub-list">
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                상품보기
+              </a>
+            </li>
+
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                서비스안내
+              </a>
+            </li>
+
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                요금안내
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="main-menu__list__item--multiple customer-support">
+          <a class="main-menu__list__link" href="#">고객지원</a>
+          <a class="main-menu__list__drop js-main-menu__list__drop" href="#"></a>
+        </li>
+
+        <li class="main-menu__list__item js-customer-support">
+          <ul class="main-menu__list__sub-list">
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                공지사항
+              </a>
+            </li>
+
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                온라인문의
+              </a>
+            </li>
+
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                자주하는 질문
+              </a>
+            </li>
+
+            <li class="main-menu__list__sub-list__item">
+              <a class="main-menu__list__sub-list__link" href="#">
+                문의 및 연락처
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
 
     <div class="dim-bg"></div>
 
-    <div class="index__content">
+    <div class="index__content js-index__content">
       <section class="index__section active">
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
@@ -117,7 +169,7 @@
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
-              디자이너의 <span class="index__section__title--bold">생각을 더해줍니다</span>
+              퍼블리셔의 <span class="index__section__title--bold">스킬을 도와줍니다</span>
             </h1>
 
             <p class="index__section__description">

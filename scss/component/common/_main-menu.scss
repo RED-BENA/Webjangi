@@ -1,0 +1,130 @@
+.main-menu {
+  display: none;
+  width:  290px;
+  font-size: 0.9375rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+  &.open {
+    display: block;
+  }
+
+  &__profile {
+    height: 55px;
+    background-color: $red-color;
+    border-bottom: 1px solid #912129;
+    position: relative;
+    @include clearfix;
+  }
+
+  &__profile__image {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-image:  url(../images/login_btn.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+  }
+
+  &__close {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-image:  url(../images/closeBtn.png);
+    background-size: cover;
+    float: right;
+  }
+
+  &__login {
+    height: 50px;
+    line-height: 50px;
+    background-color: $red-color;
+    padding-left: 13px;
+  }
+
+  &__login a {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &__list {
+    height: 100vh;
+    background-color: #fff;
+  }
+
+  &__list__item,
+  &__list__item--multiple {
+    padding: 17px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    @include clearfix;
+  }
+
+  &__list__item--multiple.open {
+    background-color: #f5f5f5;
+  }
+
+  &__list__item--multiple + &__list__item {
+    display: none;
+    padding: 0;
+  }
+
+  &__list__sub-list {
+    background-color: #f5f5f5;
+    padding: 15px;
+  }
+
+  &__list__sub-list__item {
+    padding: 5px 0;
+  }
+
+  &__list__sub-list__link {
+    color: $black-color;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  &__list__link {
+    color: $black-color;
+    font-weight: bold;
+  }
+
+  &__list__drop {
+    display: block;
+    width: 18px;
+    height: 10px;
+    background-image: url(../images/ico_drop.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+  }
+
+  &__list__drop.open {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+}
+
+.dim-bg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+
+  &.open {
+    display: block;
+  }
+}

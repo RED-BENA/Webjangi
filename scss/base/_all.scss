@@ -1,9 +1,18 @@
 html {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
   font-family: 'Roboto', 'NanumSquare';
+}
+
+a {
+  color: $black-color;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 @mixin clearfix {

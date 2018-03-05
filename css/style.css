@@ -1,8 +1,112 @@
-html {
-  overflow: hidden; }
-
 body {
   font-family: 'Roboto', 'NanumSquare'; }
+
+a {
+  color: #363636;
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.main-menu {
+  display: none;
+  width: 290px;
+  font-size: 0.9375rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999; }
+  .main-menu.open {
+    display: block; }
+  .main-menu__profile {
+    height: 55px;
+    background-color: #bb162c;
+    border-bottom: 1px solid #912129;
+    position: relative; }
+    .main-menu__profile:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .main-menu__profile__image {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-image: url(../images/login_btn.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%); }
+  .main-menu__close {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-image: url(../images/closeBtn.png);
+    background-size: cover;
+    float: right; }
+  .main-menu__login {
+    height: 50px;
+    line-height: 50px;
+    background-color: #bb162c;
+    padding-left: 13px; }
+  .main-menu__login a {
+    color: #fff;
+    font-weight: bold; }
+  .main-menu__list {
+    height: 100vh;
+    background-color: #fff; }
+  .main-menu__list__item, .main-menu__list__item--multiple {
+    padding: 17px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative; }
+    .main-menu__list__item:after, .main-menu__list__item--multiple:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .main-menu__list__item--multiple.open {
+    background-color: #f5f5f5; }
+  .main-menu__list__item--multiple + .main-menu__list__item {
+    display: none;
+    padding: 0; }
+  .main-menu__list__sub-list {
+    background-color: #f5f5f5;
+    padding: 15px; }
+  .main-menu__list__sub-list__item {
+    padding: 5px 0; }
+  .main-menu__list__sub-list__link {
+    color: #363636;
+    font-size: 0.875rem;
+    font-weight: bold; }
+  .main-menu__list__link {
+    color: #363636;
+    font-weight: bold; }
+  .main-menu__list__drop {
+    display: block;
+    width: 18px;
+    height: 10px;
+    background-image: url(../images/ico_drop.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s; }
+  .main-menu__list__drop.open {
+    transform: translateY(-50%) rotate(-180deg); }
+
+.dim-bg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998; }
+  .dim-bg.open {
+    display: block; }
 
 .index__header {
   width: 100%;
@@ -124,7 +228,8 @@ body {
     float: right; }
   .index__section__download {
     color: #363636;
-    font-size: 1rem; }
+    font-size: 1rem;
+    font-weight: bold; }
   .index__section__download--more {
     display: inline-block;
     width: 10px;
