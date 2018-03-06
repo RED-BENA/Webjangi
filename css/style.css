@@ -79,7 +79,7 @@ li {
     font-size: 0.875rem;
     font-weight: bold; }
   .main-menu__list__link {
-    color: #363636;
+    color: #363636 !important;
     font-weight: bold; }
   .main-menu__list__drop {
     display: block;
@@ -141,16 +141,17 @@ li {
     margin-bottom: 0; }
 
 .index__background {
-  display: none;
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center center;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s linear; }
   .index__background.active {
-    display: block; }
+    opacity: 1; }
   .index__background.background1 {
     background-image: url(../images/main_visual02.jpg); }
   .index__background.background2 {
@@ -177,12 +178,38 @@ li {
     width: 100%;
     height: 100%; }
 
+.index__container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+
+.index__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.75, 0.35, 0.3, 0.95); }
+
 .index__section {
   width: 100%;
   height: 100vh;
   background-color: transparent;
   padding: 60px 15px 15px;
-  position: relative; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s linear .5s; }
+  .index__section:first-child {
+    top: 0;
+    left: 0; }
+  .index__section:nth-child(2) {
+    top: 100%;
+    left: 0; }
+  .index__section:nth-child(3) {
+    top: 200%;
+    left: 0; }
+  .index__section.active {
+    opacity: 1; }
   .index__section__link {
     display: block;
     width: 100%;
@@ -196,9 +223,10 @@ li {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 9997; }
   .index__section__title {
-    color: #363636;
+    color: #363636 !important;
     font-size: 1.875rem;
     font-weight: 100;
     word-break: keep-all;
@@ -222,12 +250,12 @@ li {
     top: 15px;
     left: -85px; }
   .index__section__quantity {
-    color: #363636;
+    color: #363636 !important;
     font-size: 2.1875rem;
     font-weight: 600;
     float: right; }
   .index__section__download {
-    color: #363636;
+    color: #363636 !important;
     font-size: 1rem;
     font-weight: bold; }
   .index__section__download--more {
@@ -243,16 +271,18 @@ li {
     position: fixed;
     bottom: 15px;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    opacity: .7; }
   .index__section__scroll img {
-    max-width: 100%;
-    opacity: .2; }
+    max-width: 100%; }
   .index__section__location {
     display: block;
     width: 26px;
     position: fixed;
     bottom: 15px;
     right: 15px;
-    opacity: .5; }
+    opacity: .5;
+    z-index: 9998; }
   .index__section__location img {
-    max-width: 100%; }
+    max-width: 100%;
+    z-index: 9998; }

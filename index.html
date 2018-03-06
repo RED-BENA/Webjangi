@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/index.js"></script>
   <title>웹쟁이 | 무료 웹소스 제공</title>
 </head>
 
@@ -31,9 +31,9 @@
   </header>
 
   <div class="index__container">
-    <div class="index__background background1 active"></div>
-    <div class="index__background background2"></div>
-    <div class="index__background background3"></div>
+    <div class="index__background js-index__background background1 active"></div>
+    <div class="index__background js-index__background background2"></div>
+    <div class="index__background js-index__background background3"></div>
 
     <ul class="index__indicator">
       <li class="index__indicator__item active">
@@ -133,7 +133,7 @@
     <div class="dim-bg"></div>
 
     <div class="index__content js-index__content">
-      <section class="index__section active">
+      <section class="index__section js-index__section active">
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
@@ -146,7 +146,7 @@
 
             <div class="index__section__decoration">
               <div class="index__section__red-line"></div>
-              <p class="index__section__quantity">345</p>
+              <p class="index__section__quantity js-index__section__quantity designer">0</p>
             </div>
 
             <div class="index__section__download">
@@ -155,17 +155,9 @@
             </div>
           </a>
         </div>
-
-        <span class="index__section__scroll">
-          <img src="images/ico_mouse.png" />
-        </span>
-
-        <span class="index__section__location">
-          <img src="images/ico_location.png" />
-        </span>
       </section>
 
-      <section class="index__section active">
+      <section class="index__section js-index__section active">
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
@@ -173,12 +165,12 @@
             </h1>
 
             <p class="index__section__description">
-              다양한 디자인 소스 제공
+              다양한 템플릿, 스크립트 제공
             </p>
 
             <div class="index__section__decoration">
               <div class="index__section__red-line"></div>
-              <p class="index__section__quantity">345</p>
+              <p class="index__section__quantity js-index__section__quantity publicer">0</p>
             </div>
 
             <div class="index__section__download">
@@ -187,30 +179,22 @@
             </div>
           </a>
         </div>
-
-        <span class="index__section__scroll">
-          <img src="images/ico_mouse.png" />
-        </span>
-
-        <span class="index__section__location">
-          <img src="images/ico_location.png" />
-        </span>
       </section>
 
-      <section class="index__section active">
+      <section class="index__section js-index__section active">
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
-              디자이너의 <span class="index__section__title--bold">생각을 더해줍니다</span>
+              프리미엄의 <span class="index__section__title--bold">기준을<br />바꿉니다</span>
             </h1>
 
             <p class="index__section__description">
-              다양한 디자인 소스 제공
+              반응형웹 제작 - 다양한 솔루션 제공
             </p>
 
             <div class="index__section__decoration">
               <div class="index__section__red-line"></div>
-              <p class="index__section__quantity">345</p>
+              <p class="index__section__quantity js-index__section__quantity premium">0</p>
             </div>
 
             <div class="index__section__download">
@@ -219,16 +203,16 @@
             </div>
           </a>
         </div>
-
-        <span class="index__section__scroll">
-          <img src="images/ico_mouse.png" />
-        </span>
-
-        <span class="index__section__location">
-          <img src="images/ico_location.png" />
-        </span>
       </section>
     </div>
+
+    <span class="index__section__scroll">
+      <img src="images/ico_mouse.png" />
+    </span>
+
+    <span class="index__section__location">
+      <img src="images/ico_location.png" />
+    </span>
   </div>
 </body>
 </html>

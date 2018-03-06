@@ -1,16 +1,12 @@
 $(document).ready(function() {
-  $(window).scroll(function() {
-    $('.js-index__content').css('transform', 'translateY(100vh)');
-  });
 
   $('.js-index__header__menu-button').click(function() {
-    $('.js-main-menu').show('slide', {direction: 'right'}, 300);
+    $('.js-main-menu').animate({width:'toggle'},350);
     $('.dim-bg').addClass('open');
   });
 
   $('.js-main-menu__close').click(function(e) {
-    e.stopPropagation();
-    $('.js-main-menu').hide('slide', {direction: 'right'}, 300);
+    $('.js-main-menu').animate({width:'toggle'},350);
     $('.dim-bg').removeClass('open');
   })
 
