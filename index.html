@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/swipe.js"></script>
   <script src="js/jquery.mousewheel.min.js"></script>
   <script src="js/index.js"></script>
+
+  <style scoped>
+    html {
+      overflow: hidden;
+    }
+  </style>
+
   <title>웹쟁이 | 무료 웹소스 제공</title>
 </head>
 
@@ -24,10 +31,34 @@
       <img src="images/logo_wr.png" />
     </a>
 
+    <nav class="index__nav">
+      <ul class="index__nav__list">
+        <li class="index__nav__list__item">
+          <a class="index__nav__list__link" href="#">무료디자인</a>
+        </li>
+
+        <li class="index__nav__list__item">
+          <a class="index__nav__list__link" href="#">무료템플릿</a>
+        </li>
+
+        <li class="index__nav__list__item">
+          <a class="index__nav__list__link" href="#">프리미엄</a>
+        </li>
+
+        <li class="index__nav__list__item">
+          <a class="index__nav__list__link" href="#">고객지원</a>
+        </li>
+      </ul>
+    </nav>
+
     <a class="index__header__menu-button js-index__header__menu-button" href="#">
       <span class="index__header__menu-button__line"></span>
       <span class="index__header__menu-button__line"></span>
       <span class="index__header__menu-button__line"></span>
+    </a>
+
+    <a class="index__header__login">
+      <img src="../images/mypge_btn_trans.png" />
     </a>
   </header>
 
@@ -138,7 +169,11 @@
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
-              디자이너의 <span class="index__section__title--bold">생각을 더해줍니다</span>
+              디자이너의<br />
+              <span class="index__section__title--bold">
+                생각을<br />
+                더해줍니다
+              </span>
             </h1>
 
             <p class="index__section__description">
@@ -162,7 +197,11 @@
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
-              퍼블리셔의 <span class="index__section__title--bold">스킬을 도와줍니다</span>
+              퍼블리셔의<br />
+              <span class="index__section__title--bold">
+                스킬을<br />
+                도와줍니다
+              </span>
             </h1>
 
             <p class="index__section__description">
@@ -186,7 +225,11 @@
         <div class="index__section__floating">
           <a class="index__section__link" href="#">
             <h1 class="index__section__title">
-              프리미엄의 <span class="index__section__title--bold">기준을<br />바꿉니다</span>
+              프리미엄의<br />
+              <span class="index__section__title--bold">
+                기준을<br />
+                바꿉니다
+              </span>
             </h1>
 
             <p class="index__section__description">

@@ -195,4 +195,15 @@
     max-width: 100%;
     z-index: 9998;
   }
+
+  @include laptop {
+    &__floating {
+      width: 480px;
+      height: 440px;
+    }
+
+    &__title {
+      font-size: 3.25rem;
+    }
+  }
 }
