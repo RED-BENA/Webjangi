@@ -21,6 +21,8 @@
 
   .index__nav {
     display: none;
+    text-align: center;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 50%;
@@ -29,6 +31,7 @@
   }
 
   .index__nav__list {
+    display: inline-block;
     height: 100%;
     line-height: 77px;
     @include clearfix;
@@ -36,7 +39,7 @@
 
   .index__nav__list__item {
     height: 100%;
-    margin: 0 30px;
+    margin: 0 23px;
     float: left;
   }
 
@@ -49,7 +52,7 @@
   .index__nav__list__link {
     color: #fff;
     font-size: 1.0625rem;
-    font-weight: normal;
+    font-weight: 600;
   }
 
   &__menu-button {
@@ -79,7 +82,7 @@
     border-radius: 100%;
     position: absolute;
     top: 50%;
-    right: 50px;
+    right: 20px;
     transform: translateY(-50%);
   }
 
@@ -89,11 +92,14 @@
 
   @include laptop {
     height: 77px;
-    padding: 0 50px;
+    padding: 10px 20px;
 
     &__logo {
       width: 75px;
-      margin: 17px 0;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
     }
 
     .index__nav {
@@ -106,6 +112,22 @@
 
     &__login {
       display: block;
+    }
+  }
+
+  @include laptop-l {
+    padding: 0 50px;
+
+    &__logo {
+      margin: 17px 0;
+    }
+
+    .index__nav__list__item {
+      margin: 0 30px;
+    }
+
+    &__login {
+      right: 50px;
     }
   }
 }
