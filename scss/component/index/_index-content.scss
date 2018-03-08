@@ -32,9 +32,8 @@
     height: 41px;
     background-color: #fff;
     position: absolute;
-    top: 30%;
-    left: 20px;
-    z-index: 9999;
+    top: -20px;
+    left: -30px;
   }
 
   &__button--more {
@@ -43,12 +42,63 @@
     height: 100%;
     background: url(../images/ico_plus_m.png) no-repeat center;
     position: relative;
+    z-index: 9999;
   }
 
   &__floating {
+    color: $black-color;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-top: -150px;
+    padding: 0 30px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50px;
+    z-index: 9999;
+  }
+
+  &__floating__title--eng {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  &__floating__title--kor {
+    color: $red-color;
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+    visibility: hidden;
+  }
+
+  &__floating__description {
+    line-height: 1.8;
+    visibility: hidden;
+  }
+
+  &__floating.active {
+    background-color: #fff;
+    padding: 70px 40px 80px;
+  }
+
+  &__floating.active &__button {
+    background-color: $red-color;
+  }
+
+  &__floating.active &__button--more {
+    background: url(../images/ico_plus_wr.png) no-repeat center;
+    transform: rotate(135deg);
+  }
+
+  &__floating.active &__floating__title--eng {
+    color: $red-color;
+  }
+
+  &__floating.active &__floating__title--kor {
+    visibility: visible;
+  }
+
+  &__floating.active &__floating__description {
+    visibility: visible;
   }
 }
 
