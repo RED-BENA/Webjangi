@@ -150,4 +150,8 @@ $(document).ready(function() {
   $('.js-index__section:nth-child(3)').on("swipedown", function(e) {
     $.scrollSection_swipedown(3);
   });
+
+  $('.js-web-source__button--more').click(function(e) {
+    $('.js-web-source__floating').toggleClass('active');
+  });
 });

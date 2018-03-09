@@ -26,82 +26,6 @@
   }
 }
 
-.web-source {
-  &__button {
-    width: 41px;
-    height: 41px;
-    background-color: #fff;
-    position: absolute;
-    top: -20px;
-    left: -30px;
-  }
-
-  &__button--more {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url(../images/ico_plus_m.png) no-repeat center;
-    position: relative;
-    z-index: 9999;
-  }
-
-  &__floating {
-    color: $black-color;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    margin-top: -150px;
-    padding: 0 30px;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    z-index: 9999;
-  }
-
-  &__floating__title--eng {
-    color: #fff;
-    font-weight: 400;
-    margin-bottom: 5px;
-  }
-
-  &__floating__title--kor {
-    color: $red-color;
-    font-size: 1.375rem;
-    margin-bottom: 20px;
-    visibility: hidden;
-  }
-
-  &__floating__description {
-    line-height: 1.8;
-    visibility: hidden;
-  }
-
-  &__floating.active {
-    background-color: #fff;
-    padding: 70px 40px 80px;
-  }
-
-  &__floating.active &__button {
-    background-color: $red-color;
-  }
-
-  &__floating.active &__button--more {
-    background: url(../images/ico_plus_wr.png) no-repeat center;
-    transform: rotate(135deg);
-  }
-
-  &__floating.active &__floating__title--eng {
-    color: $red-color;
-  }
-
-  &__floating.active &__floating__title--kor {
-    visibility: visible;
-  }
-
-  &__floating.active &__floating__description {
-    visibility: visible;
-  }
-}
-
 .index__indicator {
   width: 2px;
   height: 100vh;
@@ -350,6 +274,47 @@
       opacity: 1;
       bottom: 25px;
       right: 50px;
+    }
+  }
+}
+
+@include laptop-l {
+  .index__indicator {
+    right: 50px;
+  }
+
+  .index__section {
+    &__floating {
+      width: 480px;
+      height: 480px;
+      padding: 40px 50px;
+    }
+
+    &__title {
+      font-size: 3.25rem;
+    }
+
+    &__description {
+      font-size: 1.0625rem;
+    }
+
+    &__red-line {
+      width: 95%;
+      top: 35px;
+    }
+
+    &__quantity {
+      font-size: 3.875rem;
+      letter-spacing: 7px;
+      margin: 0;
+    }
+
+    &__download {
+      font-size: 1.25rem;
+    }
+
+    &__scroll {
+      width: 33px;
     }
   }
 }
