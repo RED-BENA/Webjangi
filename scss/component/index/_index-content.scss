@@ -26,32 +26,6 @@
   }
 }
 
-.index__indicator {
-  width: 2px;
-  height: 100vh;
-  list-style: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  &__item {
-    height: 33.33%;
-  }
-
-  &__item a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    opacity: .5;
-  }
-
-  &__item.active a {
-    background-color: $red-color;
-    opacity: 1;
-  }
-}
-
 .index__container {
   width: 100%;
   height: 100vh;
@@ -112,6 +86,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9997;
+    opacity: 0;
+    transition: opacity .5s ease .5s;
+  }
+
+  &__floating.open {
+    opacity: 1;
   }
 
   &__title {
@@ -137,12 +117,17 @@
   }
 
   &__red-line {
-    width: 100%;
+    width: 0px;
     height: 5px;
     background-color: $red-color;
     position: absolute;
     top: 15px;
     left: -85px;
+    transition: width .5s ease 1s;
+  }
+
+  &__red-line.open {
+    width: 100%;
   }
 
   &__quantity {
@@ -195,38 +180,8 @@
     max-width: 100%;
     z-index: 9998;
   }
-}
 
-@include laptop {
-  .index__indicator {
-    width: 50px;
-    height: auto;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    z-index: 9999;
-
-    &__item {
-      width: 100%;
-      height: 3px;
-      margin-bottom: 20px;
-      @include clearfix;
-    }
-
-    &__item a {
-      background-color: #fff;
-      width: 18px;
-      opacity: 1;
-      float: right;
-    }
-
-    &__item.active a {
-      width: 100%;
-      background-color: $red-color;
-    }
-  }
-
-  .index__section {
+  @include laptop {
     &__floating {
       width: 340px;
       height: 340px;
@@ -262,6 +217,12 @@
       width: 13px;
       height: 13px;
       background-image: url(../images/ico_plus_s.png);
+      transform: rotate(0deg);
+      transition: transform .5s;
+    }
+
+    &__floating:hover &__download--more {
+      transform: rotate(360deg);
     }
 
     &__scroll {
@@ -276,14 +237,8 @@
       right: 50px;
     }
   }
-}
 
-@include laptop-l {
-  .index__indicator {
-    right: 50px;
-  }
-
-  .index__section {
+  @include laptop-l {
     &__floating {
       width: 480px;
       height: 480px;
@@ -299,8 +254,11 @@
     }
 
     &__red-line {
-      width: 95%;
       top: 35px;
+    }
+
+    &__red-line.open {
+      width: 95%;
     }
 
     &__quantity {

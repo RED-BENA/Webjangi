@@ -97,6 +97,9 @@ $(document).ready(function() {
   $.increase('publicer', init_val, max_publicer);
   $.increase('premium', init_val, max_premium);
 
+  $('.js-index__section__floating').addClass('open');
+  $('.js-index__section__red-line').addClass('open');
+
   // section1 mousewheel up/down
   $('.js-index__section:first-child').mousewheel(function(e) {
     if (e.deltaY == 1) { // mousewheel up

@@ -1,8 +1,11 @@
 @import "base/mediaquery.scss";
 @import "base/color.scss";
 @import "base/all.scss";
+
+@import "component/common/header.scss";
 @import "component/common/main-menu.scss";
 
 @import "component/index/index-header.scss";
 @import "component/index/index-content.scss";
+@import "component/index/index-indicator.scss";
 @import "component/index/web-source.scss";
